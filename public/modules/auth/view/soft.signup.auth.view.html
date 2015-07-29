@@ -1,0 +1,90 @@
+<section>
+	<div class="modal-content">
+		<div class="modal-header">
+			<button type="button" class="close" ng-click="closeModal()" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			<h4 class="modal-title text-center">&nbsp;</h4>
+		</div>
+		<div class="modal-body">
+			<h4 ng-show="error" class="alert alert-danger">{{error}}</h4>
+			<form class="form">
+				<div ng-show="step1">
+					<p type-config-directive text="Tell us about your car..." start-delay="100" delay="40">
+						<span class="glyphicon glyphicon-console" aria-hidden="true"></span>
+					</p>
+					<div class="form-group">
+						<div class="input-group input-group-lg">
+							<span class="input-group-addon">
+								<i class="text-muted glyphicon glyphicon-star"></i>
+							</span>
+							<input type="text" class="form-control" placeholder="Car Model">
+						</div>
+					</div>
+					<div class="form-group">
+						<button ng-click="step(2)" class="btn btn-lg btn-block btn-defailt">Next</button>
+					</div>
+				</div>
+				<div ng-show="step2">
+					<div class="form-group">
+						<p type-config-directive text="We want to call you , you know! for confirmation , so whats your number..." start-delay="100" delay="40">
+							<div class="input-group input-group-lg">
+								<span class="input-group-addon">
+									<i class="text-muted glyphicon glyphicon-phone"></i>
+								</span>
+								<input type="text" class="form-control" placeholder="Mobile Phone">
+							</div>
+						</div>
+						<div class="form-group">
+						<button ng-click="step(3)" class="btn btn-lg btn-block btn-defailt">Next</button>
+						</div>
+					</div>
+					<div ng-show="step3">
+						<div class="form-group">
+							<p type-config-directive text="great, now all we need is the number we have just messaged to your mobile phone number" start-delay="100" delay="40">
+								<div class="input-group input-group-lg">
+									<span class="input-group-addon">
+										<i class="text-muted glyphicon glyphicon-phone"></i>
+									</span>
+									<input type="text" class="form-control" placeholder="Mobile Phone">
+								</div>
+							</div>
+							<div class="form-group">
+							<button ng-click="step(4)" class="btn btn-lg btn-block btn-defailt">Next</button>
+							</div>
+						</div>
+						<div ng-show="step4">
+							<div class="form-group">
+								<p type-config-directive text="ok , cool ... we will call in minuetes but ...hmmm .... what should we call you!!!?" start-delay="100" delay="40">
+									<div class="input-group input-group-lg">
+										<span class="input-group-addon">
+											<i class="text-muted glyphicon glyphicon-user"></i>
+										</span>
+										<input type="text" class="form-control" placeholder="first name">
+									</div>
+									<div class="input-group input-group-lg">
+										<span class="input-group-addon">
+											<i class="text-muted glyphicon glyphicon-user"></i>
+										</span>
+										<input type="text" class="form-control" placeholder="last name">
+									</div>
+								</div>
+								<div class="form-group">
+								<button ng-click="step(5)" class="btn btn-lg btn-block btn-defailt">Next</button>
+								</div>
+							</div>
+							<div ng-show="step5">
+								<div class="form-group">
+									<p type-config-directive text="THANK YOU :) YOU ARE AWESOME" start-delay="100" delay="40"></p>
+									<h1 class="text-center">
+										<i style="color: red;" class="glyphicon glyphicon-heart"></i>
+									</h1>
+								</div>
+								<div class="form-group">
+									<button ng-click="closeModal()" class="btn btn-lg btn-block btn-defailt">Go!</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
