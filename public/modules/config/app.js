@@ -35,6 +35,12 @@ smsconfirm.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', 
 			controller: 'indexHomeController',
 			cache: true
 		})
+		.state('contact',{
+			url: '/contact',
+			templateUrl: 'public/modules/home/view/contact.home.view.html',
+			controller: 'indexHomeController',
+			cache: true
+		})
 		.state('signin', {
 			url: '/signin',
 			templateUrl: 'public/modules/auth/view/signin.auth.view.html',
